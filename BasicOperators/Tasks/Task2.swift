@@ -9,6 +9,5 @@
 ///
 /// Level: 😂
 func findLastDigit(of x1: Int) -> Int {
-    // Write your solution here
-    return 0
+    return abs(x1) % 10
 }

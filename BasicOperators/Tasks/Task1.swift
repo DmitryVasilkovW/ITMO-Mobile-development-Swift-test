@@ -9,6 +9,5 @@
 ///
 /// Level: 😂
 func calculateDifference(of x1: Int, with x2: Int) -> Int {
-    // Write your solution here
-    return 0
+    return x1 - x2
 }

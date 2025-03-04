@@ -11,6 +11,6 @@
 ///
 /// Level: 👍🏻
 func checkIsPalindrome(for input: String) -> Bool {
-    // Write your solution here
-    return false
+    let cleanedInput = input.lowercased().filter { $0.isLetter || $0.isNumber }
+    return cleanedInput == String(cleanedInput.reversed())
 }

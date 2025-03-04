@@ -10,7 +10,8 @@
 /// - Warning: For example, for the input "Hello, World" with the substring "World" and the replacement "Swift", the result will be "Hello, Swift".
 ///
 /// Level: 👍🏻
+import Foundation
+
 func replaceSubstring(in input: String, target: String, replacement: String) -> String {
-    // Write your solution here
-    return ""
+    return input.replacingOccurrences(of: target, with: replacement)
 }

@@ -11,6 +11,17 @@
 ///
 /// Level: 😴
 func calculateAll(of x1: Int, with x2: Int) -> [String: Int] {
-    // Write your solution here
-    return [:]
+    var results: [String: Int] = [
+        "+": x1 + x2,
+        "-": x1 - x2,
+        "*": x1 * x2
+    ]
+    
+    if x2 != 0 {
+        results["/"] = x1 / x2
+        results["%"] = x1 % x2
+    }
+    
+    return results
 }
+

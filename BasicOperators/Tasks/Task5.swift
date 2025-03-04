@@ -15,7 +15,27 @@
 /// - Returns: the `Tuple` with `Double` rounded to 2 digits.
 ///
 /// Level: 😇
+
+import Foundation
+
 func findRoots(a: Double, b: Double, c: Double) -> (Double, Double) {
-    // Write your solution here
-    return (0.0, 0.0)
+    let discriminant = b * b - 4 * a * c
+    let sqrtDiscriminant = sqrt(discriminant)
+    let root1 = (-b + sqrtDiscriminant) / (2 * a)
+    let root2 = (-b - sqrtDiscriminant) / (2 * a)
+    
+    let maxRoot = max(root1, root2)
+    let minRoot = min(root1, root2)
+    
+    let roundedMax = Double(round(100 * maxRoot) / 100)
+    let roundedMin = Double(round(100 * minRoot) / 100)
+    
+    if roundedMax.isNaN || roundedMin.isNaN {
+        return (0.0, 0.0)
+    }
+    
+    return (roundedMax, roundedMin)
 }
+
+
+

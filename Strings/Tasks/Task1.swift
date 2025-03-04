@@ -9,6 +9,5 @@
 ///
 /// Level: 😴
 func reverseString(for input: String) -> String {
-    // Write your solution here
-    return String()
+    return String(input.reversed())
 }

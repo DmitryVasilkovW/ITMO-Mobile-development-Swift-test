@@ -9,6 +9,7 @@
 /// `Array` of the ages from the smallest to the biggest as `Strings`.
 /// Level: 😴
 func sortTheAge(age1: Int, age2: Int, age3: Int) -> [String] {
-    // Write your solution here
-    return []
+    let ages = [age1, age2, age3].sorted()
+    return ages.map { String($0) }
 }
+

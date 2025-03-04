@@ -9,6 +9,12 @@
 ///
 /// Level: 👍🏻
 func characterFrequency(in input: String) -> [Character: Int] {
-    // Write your solution here
-    return [Character("s"): 1]
+    var frequencyDict: [Character: Int] = [:]
+
+    for char in input {
+        frequencyDict[char, default: 0] += 1
+    }
+
+    return frequencyDict
 }
+
