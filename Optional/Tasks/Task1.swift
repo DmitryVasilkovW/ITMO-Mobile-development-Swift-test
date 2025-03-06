@@ -11,6 +11,8 @@
 ///
 /// Level: 😂
 func getLength(for str: String?) -> Int? {
-    // Write your solution here
-    return nil
+    guard let str = str else {
+        return nil
+    }
+    return str.count
 }

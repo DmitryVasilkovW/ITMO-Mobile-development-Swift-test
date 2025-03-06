@@ -11,9 +11,15 @@
 /// - Warning: The incrementer should start with `incrementAmount` value after initialization.
 ///
 /// Level: 👍🏻
+///
+var globalValue = 0
+
 func createIncrementer(incrementAmount: Int) -> () -> Int {
-    // Your implementation here
+    var currentValue = globalValue
+    
     return {
-        return 0
+        currentValue += incrementAmount
+        globalValue = currentValue
+        return currentValue
     }
 }

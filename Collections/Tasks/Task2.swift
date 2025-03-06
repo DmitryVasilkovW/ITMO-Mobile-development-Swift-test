@@ -9,6 +9,5 @@
 ///
 /// Level: 👍🏻
 func sortStrings(_ array: [String]) -> [String] {
-    // Write your solution here
-    return []
+    return array.sorted()
 }

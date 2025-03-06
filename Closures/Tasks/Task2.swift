@@ -9,6 +9,5 @@
 ///
 /// Level: 😴
 func performOperation(a: Int, b: Int, operationClosure: (Int, Int) -> Int) -> Int {
-    // Your implementation here
-    return 0
+    return operationClosure(a, b)
 }

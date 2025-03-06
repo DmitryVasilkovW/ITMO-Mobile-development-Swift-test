@@ -24,12 +24,10 @@ struct Rectangle {
     var height: Double
 
     func area() -> Double {
-        // Calculate and return the area
-        return 0.0
+        return width * height
     }
 
     func perimeter() -> Double {
-        // Calculate and return the perimeter
-        return 0.0
+        return 2 * (width + height)
     }
 }

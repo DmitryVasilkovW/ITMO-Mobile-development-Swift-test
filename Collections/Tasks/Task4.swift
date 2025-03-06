@@ -12,6 +12,5 @@
 ///
 /// Level: 🤓
 func value(forKey key: String, in dictionary: [String: Any]) -> Any? {
-    // Write your solution here
-    return 0
+    return dictionary[key]
 }

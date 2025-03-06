@@ -20,7 +20,13 @@ struct Company {
     var employees: [Person]
 
     func youngestEmployee() -> Person? {
-        // Write your solution here
-        return nil
+        let validEmployees = employees.filter { $0.age != nil }
+        
+        guard !validEmployees.isEmpty else {
+            return nil
+        }
+        
+        let youngest = validEmployees.min { $0.age! < $1.age! }
+        return youngest
     }
 }

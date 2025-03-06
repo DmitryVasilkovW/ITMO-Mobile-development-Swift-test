@@ -24,25 +24,37 @@
    in the format: "Make: Make, Model: Model, Year: Year, Current Speed: Speed".
 */
 class Car {
-    var make: String = String()
-    var model: String = String()
-    var year: Int = 0
+    var make: String
+    var model: String
+    var year: Int
     private var currentSpeed: Double = 0.0
 
     init(make: String, model: String, year: Int) {
-        // Initialize properties
+        self.make = make
+        self.model = model
+        self.year = year
     }
 
     func accelerate(by speed: Double) {
-        // Increase the current speed
+        if speed > 0 {
+            currentSpeed += speed
+        } else {
+            print("Speed must be a positive value.")
+        }
     }
 
     func decelerate(by speed: Double) {
-        // Decrease the current speed, not below zero
+        if speed > 0 {
+            currentSpeed -= speed
+            if currentSpeed < 0 {
+                currentSpeed = 0
+            }
+        } else {
+            print("Speed must be a positive value.")
+        }
     }
 
     func info() -> String {
-        // Return information about the car
-        return String()
+        return "Make: \(make), Model: \(model), Year: \(year), Current Speed: \(currentSpeed)"
     }
 }

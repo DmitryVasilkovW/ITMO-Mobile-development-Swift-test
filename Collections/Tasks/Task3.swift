@@ -10,6 +10,11 @@
 ///
 /// Level: 👍🏻
 func getFrequencyDictionary(from array: [String]) -> [String: Int] {
-    // Write your solution here
-    return [:]
+    var frequencyDict = [String: Int]()
+    
+    for item in array {
+        frequencyDict[item, default: 0] += 1
+    }
+    
+    return frequencyDict
 }

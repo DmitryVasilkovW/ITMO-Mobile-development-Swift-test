@@ -23,15 +23,22 @@ class BankAccount {
     private var balance: Double = 0.0
 
     func deposit(amount: Double) {
-        // Increase the balance
+        if amount > 0 {
+            balance += amount
+        } else {
+            print("Deposit amount must be positive.")
+        }
     }
 
     func withdraw(amount: Double) {
-        // Decrease the balance, if sufficient funds are available
+        if amount > 0 && amount <= balance {
+            balance -= amount
+        } else {
+            print("Insufficient funds or invalid amount.")
+        }
     }
 
     func getBalance() -> Double {
-        // Return the current balance
-        return 0.0
+        return balance
     }
 }

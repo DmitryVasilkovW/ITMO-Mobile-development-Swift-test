@@ -9,6 +9,5 @@
 ///
 /// Level: 😂
 let sumClosure: (Int, Int) -> Int = { a, b in
-    // Your implementation here
-    return 0
+    return a + b
 }

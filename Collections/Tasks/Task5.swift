@@ -9,6 +9,6 @@
 ///
 /// Level: 👍🏻
 func getUniqueElementsFromArrays(_ arrayA: [Int], _ arrayB: [Int]) -> [Int] {
-    // Write your solution here
-    return []
+    let combinedArray = arrayA + arrayB
+    return Array(Set(combinedArray))
 }

@@ -26,7 +26,6 @@ struct Book {
     var pages: Int
 
     func info() -> String {
-        // Return information about the book
-        return String()
+        return "\(title), Author: \(author), Pages: \(pages)"
     }
 }

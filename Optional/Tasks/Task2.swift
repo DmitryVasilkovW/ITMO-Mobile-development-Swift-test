@@ -11,6 +11,8 @@
 ///
 /// Level: 😂
 func toUppercase(_ str: String?) -> String? {
-    // Write your solution here
-    return nil
+    guard let str = str else {
+        return nil
+    }
+    return str.uppercased()
 }

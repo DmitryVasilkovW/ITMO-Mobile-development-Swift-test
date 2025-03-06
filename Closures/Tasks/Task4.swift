@@ -13,9 +13,9 @@ class Counter {
     private var count = 0
 
     func increment() -> () -> Int {
-        // Your implementation here
         return {
-            return 0
+            self.count += 1
+            return self.count
         }
     }
 }

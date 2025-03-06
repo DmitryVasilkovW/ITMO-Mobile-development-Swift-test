@@ -9,6 +9,5 @@
 ///
 /// Level: 👍🏻
 func find(in database: [String], for query: String) -> String? {
-    // Write your solution here
-    return nil
+    return database.first { $0.contains(query) }
 }

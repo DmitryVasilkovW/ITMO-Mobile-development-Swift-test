@@ -15,9 +15,11 @@ func lengthOfLongestSubstring(_ input: String) -> Int {
     var charMap = [Character: Int]()
     var maxLen = 0
     var start = 0
+    
     for (j, char) in input.enumerated() {
         if let lastIndex = charMap[char], lastIndex >= start {
             start = lastIndex + 1
+            charMap = [:]
         }
         charMap[char] = j
         let currentLen = j - start + 1

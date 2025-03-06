@@ -9,6 +9,5 @@
 ///
 /// Level: 😴
 func getUniqueElements(in array: [Int]) -> [Int] {
-    // Write your solution here
-    return []
+    return Array(Set(array))
 }

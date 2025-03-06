@@ -21,22 +21,24 @@
  - `info() -> String`: Returns a string with the person's details in the format: "First Last, Age: X, Address: Y".
 */
 class Person {
-    var firstName: String = String()
-    var lastName: String = String()
-    var age: Int = 0
-    var address: String = String()
+    var firstName: String
+    var lastName: String
+    var age: Int
+    var address: String
 
     init(firstName: String, lastName: String, age: Int, address: String) {
-        // Initialize properties
+        self.firstName = firstName
+        self.lastName = lastName
+        self.age = age
+        self.address = address
     }
 
     func fullName() -> String {
-        // Return the full name
-        return String()
+        return "\(firstName) \(lastName)"
     }
 
+
     func info() -> String {
-        // Return the information about the person
-        return String()
+        return "\(firstName) \(lastName), Age: \(age), Address: \(address)"
     }
 }
